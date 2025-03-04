@@ -12,3 +12,4 @@ c:\Users\aidan\OneDrive\Desktop\C#\C# class\obj\Debug\net9.0\refint\C# class.dll
 c:\Users\aidan\OneDrive\Desktop\C#\C# class\obj\Debug\net9.0\C# class.pdb
 c:\Users\aidan\OneDrive\Desktop\C#\C# class\obj\Debug\net9.0\C# class.genruntimeconfig.cache
 c:\Users\aidan\OneDrive\Desktop\C#\C# class\obj\Debug\net9.0\ref\C# class.dll
+c:\Users\aidan\OneDrive\Desktop\C#\C# class\obj\Debug\net9.0\C# class.sourcelink.json
