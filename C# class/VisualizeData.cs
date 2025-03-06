@@ -27,5 +27,10 @@ class VisualizeData{
     public static void RenderChart(Chart chart){
 
     }
- 
+    public static void FitData(){
+
+    }
+    public static void Zoom(){
+
+    }
 }

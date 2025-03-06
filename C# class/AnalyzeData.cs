@@ -50,15 +50,51 @@ public static double CalculateYMedian(List<(double, double)>  values){
     }
     return values[values.Count / 2].Item2;
 }
+public static double CalculateXQ1(List<(double, double)>  values){
+    values.Sort((x, y) => x.Item1.CompareTo(y.Item1));
+    return CalculateXMedian(values.GetRange(0, values.Count / 2));
+}
+public static double CalculateYQ1(List<(double, double)>  values){
+    values.Sort((x, y) => x.Item2.CompareTo(y.Item2));
+    return CalculateYMedian(values.GetRange(0, values.Count / 2));
+}
+public static double CalculateXQ3(List<(double, double)>  values){
+    values.Sort((x, y) => x.Item1.CompareTo(y.Item1));
+    return CalculateXMedian(values.GetRange((values.Count / 2)+1, values.Count / 2));
+}
+public static double CalculateYQ3(List<(double, double)>  values){
+    values.Sort((x, y) => x.Item2.CompareTo(y.Item2));
+    return CalculateYMedian(values.GetRange((values.Count / 2)+1, values.Count / 2));
+}
+public static double CalculateXIQR(List<(double, double)>  values){
+    return CalculateXQ3(values)-CalculateXQ1(values);
+}
+public static double CalculateYIQR(List<(double, double)>  values){
+    return CalculateYQ3(values)-CalculateYQ1(values);
+}
+public static String XFiveNumberSummary(List<(double, double)>  values){
+    return "Min: " + values.Min(x => x.Item1) + ", Q1: " + CalculateXQ1(values) + ", Median: " + CalculateXMedian(values) + ", Q3: " + CalculateXQ3(values) + ", Max: " + values.Max(x => x.Item1);
+}
+public static String YFiveNumberSummary(List<(double, double)>  values){
+    return "Min: " + values.Min(x => x.Item2) + ", Q1: " + CalculateYQ1(values) + ", Median: " + CalculateYMedian(values) + ", Q3: " + CalculateYQ3(values) + ", Max: " + values.Max(x => x.Item2);
+}
 public static List<double> DetectXOutliers(List<(double, double)> values){
-    List<double> outliers = new List<double>();
-
-    return [];
+    List<double> outliers=[];
+    for (int i = 0; i < values.Count; i++){
+        if (values[i].Item1 < CalculateXQ1(values) - 1.5 * CalculateXIQR(values) || values[i].Item1 > CalculateXQ3(values) + 1.5 * CalculateXIQR(values)){
+            outliers.Add(values[i].Item1);
+        }
+    }
+    return outliers;
 }
 public static List<double> DetectYOutliers(List<(double, double)> values){
-    List<double> outliers = new List<double>();
-
-    return [];
+    List<double> outliers = [];
+    for (int i = 0; i < values.Count; i++){
+        if (values[i].Item2 < CalculateYQ1(values) - 1.5 * CalculateYIQR(values) || values[i].Item2 > CalculateYQ3(values) + 1.5 * CalculateYIQR(values)){
+            outliers.Add(values[i].Item2);
+        }
+    }
+    return outliers;
 }
 public static string GenerateLineOfBestFit(List<(double, double)> values)
 {

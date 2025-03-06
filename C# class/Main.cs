@@ -6,6 +6,10 @@ using static ManiputlateaData;
 class MainClass
 {
 static void Main(string[] args){
-Console.WriteLine(CalculateXStandardDeviation(ParseCSV(@"C:\Users\aidan\OneDrive\Desktop\C# Final\C# class\data.csv")));
+List<(double, double)> data = [(2, 2), (2, 3), (3, 4), (4, 5), (5, 6)];
+Console.WriteLine(CalculateXQ1(data));
+Console.WriteLine(CalculateXMedian(data));
+Console.WriteLine(CalculateXQ3(data));
+Console.WriteLine(XFiveNumberSummary(data));
 }
 }

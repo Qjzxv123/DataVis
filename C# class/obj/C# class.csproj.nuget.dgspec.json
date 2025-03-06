@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\C# class.csproj": {}
+    "c:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\C# class.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\C# class.csproj": {
+    "c:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\C# class.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\C# class.csproj",
+        "projectUniqueName": "c:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\C# class.csproj",
         "projectName": "C# class",
-        "projectPath": "C:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\C# class.csproj",
+        "projectPath": "c:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\C# class.csproj",
         "packagesPath": "C:\\Users\\aidan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\obj\\",
+        "outputPath": "c:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aidan\\AppData\\Roaming\\NuGet\\NuGet.Config"
