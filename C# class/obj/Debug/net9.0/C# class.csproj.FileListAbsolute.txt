@@ -12,3 +12,18 @@ c:\Users\aidan\OneDrive\Desktop\C#\C# class\obj\Debug\net9.0\refint\C# class.dll
 c:\Users\aidan\OneDrive\Desktop\C#\C# class\obj\Debug\net9.0\C# class.pdb
 c:\Users\aidan\OneDrive\Desktop\C#\C# class\obj\Debug\net9.0\C# class.genruntimeconfig.cache
 c:\Users\aidan\OneDrive\Desktop\C#\C# class\obj\Debug\net9.0\ref\C# class.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0\C# class.exe
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0\C# class.deps.json
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0\C# class.runtimeconfig.json
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0\C# class.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0\C# class.pdb
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0\C# class.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0\C# class.AssemblyInfoInputs.cache
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0\C# class.AssemblyInfo.cs
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0\C# class.csproj.CoreCompileInputs.cache
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0\C# class.sourcelink.json
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0\C# class.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0\refint\C# class.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0\C# class.pdb
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0\C# class.genruntimeconfig.cache
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0\ref\C# class.dll
