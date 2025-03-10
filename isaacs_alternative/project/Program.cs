@@ -61,6 +61,8 @@ class Program
         
         try
         {
+            //The following is code written to process the data for use of chart generation
+            //Aiden has developed the csv and json processing that should be used in the final submission 
             List<DataPoint> dataPoints = ParseCSV(filePath);
             if (dataPoints.Count > 0)
             {
