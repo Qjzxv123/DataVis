@@ -1,0 +1,17 @@
+/Users/isaaccooper/c_sharp/project/bin/Debug/net8.0/project
+/Users/isaaccooper/c_sharp/project/bin/Debug/net8.0/project.deps.json
+/Users/isaaccooper/c_sharp/project/bin/Debug/net8.0/project.runtimeconfig.json
+/Users/isaaccooper/c_sharp/project/bin/Debug/net8.0/project.dll
+/Users/isaaccooper/c_sharp/project/bin/Debug/net8.0/project.pdb
+/Users/isaaccooper/c_sharp/project/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/isaaccooper/c_sharp/project/obj/Debug/net8.0/project.csproj.AssemblyReference.cache
+/Users/isaaccooper/c_sharp/project/obj/Debug/net8.0/project.GeneratedMSBuildEditorConfig.editorconfig
+/Users/isaaccooper/c_sharp/project/obj/Debug/net8.0/project.AssemblyInfoInputs.cache
+/Users/isaaccooper/c_sharp/project/obj/Debug/net8.0/project.AssemblyInfo.cs
+/Users/isaaccooper/c_sharp/project/obj/Debug/net8.0/project.csproj.CoreCompileInputs.cache
+/Users/isaaccooper/c_sharp/project/obj/Debug/net8.0/project.csproj.Up2Date
+/Users/isaaccooper/c_sharp/project/obj/Debug/net8.0/project.dll
+/Users/isaaccooper/c_sharp/project/obj/Debug/net8.0/refint/project.dll
+/Users/isaaccooper/c_sharp/project/obj/Debug/net8.0/project.pdb
+/Users/isaaccooper/c_sharp/project/obj/Debug/net8.0/project.genruntimeconfig.cache
+/Users/isaaccooper/c_sharp/project/obj/Debug/net8.0/ref/project.dll

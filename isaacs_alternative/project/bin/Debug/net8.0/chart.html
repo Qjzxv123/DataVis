@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSV Visualization</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .chart-container { width: 800px; height: 500px; margin: 20px auto; }
+  </style>
+</head>
+<body>
+  <h1>CSV Visualization</h1>
+  <div class="chart-container">
+    <canvas id="myChart"></canvas>
+  </div>
+  <script>
+    const ctx = document.getElementById('myChart');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Item1', 'Item2', 'Item3'],
+        datasets: [{
+          label: 'Value',
+          data: [10, 20, 30],
+          backgroundColor: 'rgba(54, 162, 235, 0.5)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        },
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'CSV Visualization'
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
