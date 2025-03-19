@@ -6,8 +6,8 @@ using static ManiputlateaData;
 class MainClass
 {
 static void Main(string[] args){
-List<(double, double)> data = [(2, 2), (2, 2), (3, 4), (4, 5), (5, 6)];
-ScaleData(data,10);
-PrintData(data);
+List<(double, double)> data = [(200, 200), (200, 300), (300, 400), (400, 500), (500, 600)];
+Chart chart=new ScatterPlot(data, "Scatter Plot", "X", "Y");
+chart.RenderChart();
 }
 }

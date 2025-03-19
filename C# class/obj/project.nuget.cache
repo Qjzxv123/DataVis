@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "k6YdYrdSvDk=",
+  "dgSpecHash": "SQPEfQur0Ys=",
   "success": true,
   "projectFilePath": "c:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\C# class.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\aidan\\.nuget\\packages\\skiasharp\\3.116.1\\skiasharp.3.116.1.nupkg.sha512",
+    "C:\\Users\\aidan\\.nuget\\packages\\skiasharp.nativeassets.macos\\3.116.1\\skiasharp.nativeassets.macos.3.116.1.nupkg.sha512",
+    "C:\\Users\\aidan\\.nuget\\packages\\skiasharp.nativeassets.win32\\3.116.1\\skiasharp.nativeassets.win32.3.116.1.nupkg.sha512"
+  ],
   "logs": []
 }
