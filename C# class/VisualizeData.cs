@@ -6,6 +6,13 @@ class Point:Chart{
 
 }
 class VisualizeData{
+    public static void PrintData(List<(double, double)> data)
+{
+    foreach (var (x, y) in data)
+    {
+        Console.WriteLine($"X: {x}, Y: {y}");
+    }
+}
     public static Chart CreateBarChart(List<(double, double)> data){
         return new Chart();
     }
