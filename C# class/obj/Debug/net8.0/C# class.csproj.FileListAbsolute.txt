@@ -1,0 +1,26 @@
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/bin/Debug/net8.0/C# class
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/bin/Debug/net8.0/C# class.deps.json
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/bin/Debug/net8.0/C# class.runtimeconfig.json
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/bin/Debug/net8.0/C# class.dll
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/bin/Debug/net8.0/C# class.pdb
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/bin/Debug/net8.0/System.Drawing.Common.dll
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/bin/Debug/net8.0/System.Private.Windows.Core.dll
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/bin/Debug/net8.0/runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/obj/Debug/net8.0/C# class.csproj.AssemblyReference.cache
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/obj/Debug/net8.0/C# class.GeneratedMSBuildEditorConfig.editorconfig
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/obj/Debug/net8.0/C# class.AssemblyInfoInputs.cache
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/obj/Debug/net8.0/C# class.AssemblyInfo.cs
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/obj/Debug/net8.0/C# class.csproj.CoreCompileInputs.cache
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/obj/Debug/net8.0/C# class.sourcelink.json
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/obj/Debug/net8.0/C# class.csproj.Up2Date
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/obj/Debug/net8.0/C# class.dll
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/obj/Debug/net8.0/refint/C# class.dll
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/obj/Debug/net8.0/C# class.pdb
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/obj/Debug/net8.0/C# class.genruntimeconfig.cache
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/obj/Debug/net8.0/ref/C# class.dll
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/bin/Debug/net8.0/SkiaSharp.dll
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/bin/Debug/net8.0/runtimes/osx/native/libSkiaSharp.dylib
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/bin/Debug/net8.0/runtimes/win-arm64/native/libSkiaSharp.dll
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/bin/Debug/net8.0/runtimes/win-x64/native/libSkiaSharp.dll
+/Users/isaaccooper/Documents/GitHub/DataVis/C# class/bin/Debug/net8.0/runtimes/win-x86/native/libSkiaSharp.dll

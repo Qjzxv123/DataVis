@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\C# class.csproj": {}
+    "/Users/isaaccooper/Documents/GitHub/DataVis/C# class/C# class.csproj": {}
   },
   "projects": {
-    "c:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\C# class.csproj": {
+    "/Users/isaaccooper/Documents/GitHub/DataVis/C# class/C# class.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\C# class.csproj",
+        "projectUniqueName": "/Users/isaaccooper/Documents/GitHub/DataVis/C# class/C# class.csproj",
         "projectName": "C# class",
-        "projectPath": "c:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\C# class.csproj",
-        "packagesPath": "C:\\Users\\aidan\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\obj\\",
+        "projectPath": "/Users/isaaccooper/Documents/GitHub/DataVis/C# class/C# class.csproj",
+        "packagesPath": "/Users/isaaccooper/.nuget/packages/",
+        "outputPath": "/Users/isaaccooper/Documents/GitHub/DataVis/C# class/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\aidan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/isaaccooper/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -37,12 +37,21 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "SkiaSharp": {
+              "target": "Package",
+              "version": "[3.116.1, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -59,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
