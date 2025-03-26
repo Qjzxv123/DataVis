@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 class AnalyzeData{
 public static double CalculateXMean(List<(double, double)> values){
     double sum = 0;

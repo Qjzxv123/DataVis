@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+
 class ManiputlateaData{
     public static void SortDataByXAscending(List<(double, double)> values){
         // Sort data in ascending order

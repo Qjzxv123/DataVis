@@ -1,101 +1,95 @@
-using System.Runtime.InteropServices;
-using SkiaSharp;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
 
-class Chart(List<(double, double)> data, string type, string title = "Untitled", string xLabel = "Untitled", string yLabel = "Untitled")
+enum ChartType
 {
-    
-    public string Title { get; set; } = title;
-    public string XLabel { get; set; } = xLabel;
-    public string YLabel { get; set; } = yLabel;
-    public List<(double, double)> Data { get; set; } = data;
-    public string Type { get; set; } = type;
-
-    public virtual void RenderChart()
-    {
-        Console.WriteLine($"Rendering {Type} chart titled '{Title}' with XLabel '{XLabel}' and YLabel '{YLabel}'.");
-    }
+    Bar,
+    Scatter,
+    Histogram,
+    Line
 }
 
-class BarChart(List<(double, double)> data, string title = "Untitled", string xLabel = "Untitled", string yLabel = "Untitled") : Chart(data, "Bar", title, xLabel, yLabel)
+class Chart : Form
 {
-    public override void RenderChart()
+    private List<(double, double)> Data { get; set; }
+    private string Title { get; set; }
+    private string XLabel { get; set; }
+    private string YLabel { get; set; }
+    private ChartType Type { get; set; }
+
+    public Chart(List<(double, double)> data, ChartType type, string title = "Untitled", string xLabel = "Untitled", string yLabel = "Untitled")
+    {
+        if (OperatingSystem.IsWindowsVersionAtLeast(6, 1))
+        {
+            this.Text = title;
+            this.WindowState = FormWindowState.Maximized;
+        }
+        Data = data;
+        Type = type;
+        Title = title;
+        XLabel = xLabel;
+        YLabel = yLabel;
+    }
+
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        base.OnPaint(e);
+
+        Graphics g = e.Graphics;
+
+        switch (Type)
+        {
+            case ChartType.Bar:
+                RenderBarChart(g);
+                break;
+            case ChartType.Scatter:
+                RenderScatterPlot(g);
+                break;
+            case ChartType.Histogram:
+                RenderHistogram(g);
+                break;
+            case ChartType.Line:
+                RenderLineChart(g);
+                break;
+            default:
+                throw new ArgumentException("Invalid chart type");
+        }
+    }
+
+    private void RenderBarChart(Graphics g)
     {
         Console.WriteLine($"Rendering Bar Chart titled '{Title}'...");
-        // Add specific rendering logic for Bar Chart
+        // Add logic to draw a bar chart
     }
-}
 
-class ScatterPlot(List<(double, double)> data, string title = "Untitled", string xLabel = "Untitled", string yLabel = "Untitled") : Chart(data, "Scatter", title, xLabel, yLabel)
-{
-    public override void RenderChart()
+    private void RenderScatterPlot(Graphics g)
     {
-        using var bitmap = new SKBitmap(1000, 1000);
-        using var canvas = new SKCanvas(bitmap);
         Console.WriteLine($"Rendering Scatter Plot titled '{Title}'...");
         foreach (var (x, y) in Data)
         {
-            canvas.DrawPoint(new SKPoint((float)x, (float)y), new SKPaint()
-            {
-                Color = SKColors.Black,
-                StrokeWidth = 10
-            });
+            g.FillEllipse(Brushes.Blue, (float)x - 2, (float)y - 2, 4, 4);
         }
-        using var image=SKImage.FromBitmap(bitmap);
-        using var data = image.Encode(SKEncodedImageFormat.Png, 100);
-        File.WriteAllBytes("../../../scatter.png", data.ToArray());
     }
-}
 
-class Histogram(List<(double, double)> data, string title = "Untitled", string xLabel = "Untitled", string yLabel = "Untitled") : Chart(data, "Histogram", title, xLabel, yLabel)
-{
-    public override void RenderChart()
+    private void RenderHistogram(Graphics g)
     {
         Console.WriteLine($"Rendering Histogram titled '{Title}'...");
-        // Add specific rendering logic for Histogram
+        // Add logic to draw a histogram
     }
-}
 
-class PieChart(List<(double, double)> data, string title = "Untitled", string xLabel = "Untitled", string yLabel = "Untitled") : Chart(data, "Pie", title, xLabel, yLabel)
-{
-    public override void RenderChart()
-    {
-        Console.WriteLine($"Rendering Pie Chart titled '{Title}'...");
-        // Add specific rendering logic for Pie Chart
-    }
-}
-
-class LineChart(List<(double, double)> data, string title = "Untitled", string xLabel = "Untitled", string yLabel = "Untitled") : Chart(data, "Line", title, xLabel, yLabel)
-{
-    public override void RenderChart()
+    private void RenderLineChart(Graphics g)
     {
         Console.WriteLine($"Rendering Line Chart titled '{Title}'...");
-        // Add specific rendering logic for Line Chart
-    }
-}
-
-class VisualizeData
-{
-    public static void PrintData(List<(double, double)> data)
-    {
-        foreach (var (x, y) in data)
+        using (Pen pen = new Pen(Color.Blue, 2))
         {
-            Console.WriteLine($"X: {x}, Y: {y}");
+            for (int i = 0; i < Data.Count - 1; i++)
+            {
+                var point1 = Data[i];
+                var point2 = Data[i + 1];
+                g.DrawLine(pen, (float)point1.Item1, (float)point1.Item2, (float)point2.Item1, (float)point2.Item2);
+            }
         }
     }
-
-    public static Chart CreateChart(string type, List<(double, double)> data, string title = "Untitled", string xLabel = "Untitled", string yLabel = "Untitled")
-    {
-        return type.ToLower() switch
-        {
-            "bar" => new BarChart(data, title, xLabel, yLabel),
-            "scatter" => new ScatterPlot(data, title, xLabel, yLabel),
-            "histogram" => new Histogram(data, title, xLabel, yLabel),
-            "pie" => new PieChart(data, title, xLabel, yLabel),
-            "line" => new LineChart(data, title, xLabel, yLabel),
-            _ => throw new ArgumentException("Invalid chart type")
-        };
-    }
-    
-
-    
 }
