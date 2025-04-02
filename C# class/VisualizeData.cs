@@ -32,13 +32,21 @@ class Chart : Form
         Title = title;
         XLabel = xLabel;
         YLabel = yLabel;
+
+        this.Resize += new EventHandler(OnResize);
     }
 
+    private void OnResize(object sender, EventArgs e)
+    {
+        this.Invalidate();
+    }
     protected override void OnPaint(PaintEventArgs e)
     {
         base.OnPaint(e);
 
         Graphics g = e.Graphics;
+
+        
         // Draw the title
         using (Font titleFont = new Font("Arial", 16, FontStyle.Bold))
         using (StringFormat titleFormat = new StringFormat() { Alignment = StringAlignment.Center })

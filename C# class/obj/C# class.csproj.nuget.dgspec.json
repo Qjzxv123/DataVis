@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\C# class.csproj": {}
+    "c:\\Object Oriented Systems Files\\datavis\\DataVis\\C# class\\C# class.csproj": {}
   },
   "projects": {
-    "c:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\C# class.csproj": {
+    "c:\\Object Oriented Systems Files\\datavis\\DataVis\\C# class\\C# class.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\C# class.csproj",
+        "projectUniqueName": "c:\\Object Oriented Systems Files\\datavis\\DataVis\\C# class\\C# class.csproj",
         "projectName": "C# class",
-        "projectPath": "c:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\C# class.csproj",
-        "packagesPath": "C:\\Users\\aidan\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\aidan\\OneDrive\\Desktop\\C# Final\\C# class\\obj\\",
+        "projectPath": "c:\\Object Oriented Systems Files\\datavis\\DataVis\\C# class\\C# class.csproj",
+        "packagesPath": "C:\\Users\\hpurs\\.nuget\\packages\\",
+        "outputPath": "c:\\Object Oriented Systems Files\\datavis\\DataVis\\C# class\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\aidan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\hpurs\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0-windows"
