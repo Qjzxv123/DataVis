@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "8tw3Oe1LXNE=",
+  "dgSpecHash": "v31PcSzWoKg=",
   "success": true,
-  "projectFilePath": "c:\\Object Oriented Systems Files\\datavis\\DataVis\\C# class\\C# class.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/isaaccooper/Documents/GitHub/DataVis/C# class/C# class.csproj",
+  "expectedPackageFiles": [
+    "/Users/isaaccooper/.nuget/packages/microsoft.win32.systemevents/9.0.3/microsoft.win32.systemevents.9.0.3.nupkg.sha512",
+    "/Users/isaaccooper/.nuget/packages/skiasharp/3.116.1/skiasharp.3.116.1.nupkg.sha512",
+    "/Users/isaaccooper/.nuget/packages/skiasharp.nativeassets.macos/3.116.1/skiasharp.nativeassets.macos.3.116.1.nupkg.sha512",
+    "/Users/isaaccooper/.nuget/packages/skiasharp.nativeassets.win32/3.116.1/skiasharp.nativeassets.win32.3.116.1.nupkg.sha512",
+    "/Users/isaaccooper/.nuget/packages/system.drawing.common/9.0.3/system.drawing.common.9.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

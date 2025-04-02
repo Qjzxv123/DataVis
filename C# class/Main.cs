@@ -1,32 +1,35 @@
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Windows.Forms;
-using System.Xml.Serialization;
-
-
-
-
-public static class Program
+using static ExtractData;
+using static AnalyzeData;
+using static VisualizeData;
+using static ManiputlateaData;
+using SkiaSharp;
+class MainClass
 {
-    [STAThread]
-    public static void Main()
+static void Main(string[] args){
+    int width = 800;
+    int height = 600;
+
+    using var bitmap = new SKBitmap(width, height);
+    using var canvas = new SKCanvas(bitmap);
+    canvas.Clear(SKColors.White);
+
+    using var paint = new SKPaint
     {
-        if (OperatingSystem.IsWindowsVersionAtLeast(6, 1))
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            List<(double, double)> data = [(200, 200), (200, 300), (300, 400), (400, 500), (500, 600)];
+            Color = SKColors.Blue,
+            IsAntialias = true,
+            StrokeWidth = 5
+    };
 
-            Console.Write("Enter chart title: ");
-            string title = Console.ReadLine() ?? string.Empty;
-            Console.Write("Enter X-axis label: ");
-            string xAxisLabel = Console.ReadLine()?? string.Empty;
-            Console.Write("Enter Y-axis label: ");
-            string yAxisLabel = Console.ReadLine()?? string.Empty;
+    canvas.DrawLine(50, 50, 400, 400, paint);
 
-            Chart chart=new Chart(data, ChartType.Scatter, title, xAxisLabel, yAxisLabel);
-            Application.Run(chart);
-        }
-    }
+    using var image = SKImage.FromBitmap(bitmap);
+    using var info = image.Encode(SKEncodedImageFormat.Png, 100);
+    File.WriteAllBytes("output.png", info.ToArray());
+
+    Console.WriteLine("Image saved as output.png");
+
+List<(double, double)> data = [(2, 2), (2, 2), (3, 4), (4, 5), (5, 6)];
+ScaleData(data,10);
+PrintData(data);
+}
 }
