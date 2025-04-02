@@ -27,3 +27,10 @@ c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0\refint\C# cla
 c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0\C# class.pdb
 c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0\C# class.genruntimeconfig.cache
 c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0\ref\C# class.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0\SkiaSharp.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0\runtimes\osx\native\libSkiaSharp.dylib
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0\runtimes\win-arm64\native\libSkiaSharp.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0\runtimes\win-x64\native\libSkiaSharp.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0\runtimes\win-x86\native\libSkiaSharp.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0\C# class.csproj.AssemblyReference.cache
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0\C# class.csproj.Up2Date
