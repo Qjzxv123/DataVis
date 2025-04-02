@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/isaaccooper/Documents/GitHub/DataVis/C# class/C# class.csproj": {}
+    "c:\\Object Oriented Systems Files\\datavis\\DataVis\\C# class\\C# class.csproj": {}
   },
   "projects": {
-    "/Users/isaaccooper/Documents/GitHub/DataVis/C# class/C# class.csproj": {
+    "c:\\Object Oriented Systems Files\\datavis\\DataVis\\C# class\\C# class.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/isaaccooper/Documents/GitHub/DataVis/C# class/C# class.csproj",
+        "projectUniqueName": "c:\\Object Oriented Systems Files\\datavis\\DataVis\\C# class\\C# class.csproj",
         "projectName": "C# class",
-        "projectPath": "/Users/isaaccooper/Documents/GitHub/DataVis/C# class/C# class.csproj",
-        "packagesPath": "/Users/isaaccooper/.nuget/packages/",
-        "outputPath": "/Users/isaaccooper/Documents/GitHub/DataVis/C# class/obj/",
+        "projectPath": "c:\\Object Oriented Systems Files\\datavis\\DataVis\\C# class\\C# class.csproj",
+        "packagesPath": "C:\\Users\\hpurs\\.nuget\\packages\\",
+        "outputPath": "c:\\Object Oriented Systems Files\\datavis\\DataVis\\C# class\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/isaaccooper/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\hpurs\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,7 +37,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -63,12 +64,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.12, 8.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.12, 8.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.12, 8.0.12]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.12, 8.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

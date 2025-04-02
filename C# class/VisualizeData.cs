@@ -46,7 +46,7 @@ class Chart : Form
 
         Graphics g = e.Graphics;
 
-        
+    
         // Draw the title
         using (Font titleFont = new Font("Arial", 16, FontStyle.Bold))
         using (StringFormat titleFormat = new StringFormat() { Alignment = StringAlignment.Center })

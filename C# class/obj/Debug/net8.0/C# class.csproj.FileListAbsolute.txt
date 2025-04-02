@@ -24,3 +24,12 @@
 /Users/isaaccooper/Documents/GitHub/DataVis/C# class/bin/Debug/net8.0/runtimes/win-arm64/native/libSkiaSharp.dll
 /Users/isaaccooper/Documents/GitHub/DataVis/C# class/bin/Debug/net8.0/runtimes/win-x64/native/libSkiaSharp.dll
 /Users/isaaccooper/Documents/GitHub/DataVis/C# class/bin/Debug/net8.0/runtimes/win-x86/native/libSkiaSharp.dll
+c:\Object Oriented Systems Files\datavis\DataVis\C# class\obj\Debug\net8.0\C# class.csproj.AssemblyReference.cache
+c:\Object Oriented Systems Files\datavis\DataVis\C# class\obj\Debug\net8.0\C# class.GeneratedMSBuildEditorConfig.editorconfig
+c:\Object Oriented Systems Files\datavis\DataVis\C# class\obj\Debug\net8.0\C# class.AssemblyInfoInputs.cache
+c:\Object Oriented Systems Files\datavis\DataVis\C# class\obj\Debug\net8.0\C# class.AssemblyInfo.cs
+c:\Object Oriented Systems Files\datavis\DataVis\C# class\obj\Debug\net8.0\C# class.csproj.CoreCompileInputs.cache
+c:\Object Oriented Systems Files\datavis\DataVis\C# class\obj\Debug\net8.0\C# class.sourcelink.json
+c:\Object Oriented Systems Files\datavis\DataVis\C# class\obj\Debug\net8.0\C# class.dll
+c:\Object Oriented Systems Files\datavis\DataVis\C# class\obj\Debug\net8.0\refint\C# class.dll
+c:\Object Oriented Systems Files\datavis\DataVis\C# class\obj\Debug\net8.0\C# class.pdb
