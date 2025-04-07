@@ -26,16 +26,30 @@ class ManiputlateaData{
         values.Clear();
         values.AddRange(sortedList);
     }
-    public static void ScaleData(List<(double, double)> values, double factor){
+    public static List<(double, double)> ScaleData(List<(double, double)> values, double factor){
         // Scale data by a factor
         var scaledList=values.Select(x => (x.Item1 * factor, x.Item2 * factor)).ToList();
         values.Clear();
         values.AddRange(scaledList);
+        return values;
     }
-    public static void RemoveDuplicates(List<(double, double)> data){
+    public static List<(double, double)> RemoveDuplicates(List<(double, double)> data){
         // Remove duplicate data points
         var distinctData=data.Distinct().ToList();
         data.Clear();
         data.AddRange(distinctData);
+        return data;
+    }
+    public static List<(double, double)> RemoveOutliers(List<(double, double)> data){
+        // Remove outliers based on a threshold
+         List<double> outliersX=AnalyzeData.DetectXOutliers(data);
+        List<double> outliersY=AnalyzeData.DetectYOutliers(data);
+        for(int i=0; i<data.Count; i++){
+            if(outliersX.Contains(data[i].Item1) || outliersY.Contains(data[i].Item2)){
+                data.RemoveAt(i);
+                i--;
+            }
+        }
+        return data;
     }
 }

@@ -15,17 +15,17 @@ public static class Program
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Example data
-            List<(double, double)> data = new List<(double, double)>
-            {
-                (1, 10),
-                (2, 20),
-                (3, 30),
-                (4, 40),
-                (5, 50)
-            };
-
+            List<(double, double)> data =  ExtractData.ParseJSON(@"C:\Users\aidan\OneDrive\Desktop\C# Final\C# class\data.json");
+            data=ManiputlateaData.RemoveDuplicates(data);
+            data=ManiputlateaData.RemoveOutliers(data);
+            Console.WriteLine("Enter Title: ");
+            String title = Console.ReadLine() ?? string.Empty;
+            Console.WriteLine("Enter X-Axis Label: ");
+            String xaxis = Console.ReadLine() ?? string.Empty;
+            Console.WriteLine("Enter Y-Axis Label: ");
+            String yaxis = Console.ReadLine() ?? string.Empty;
             // Create and display the chart
-            Chart chart = new Chart(data, ChartType.Scatter, "Line Chart Example", "X-Axis", "Y-Axis");
+            Chart chart = new(data, ChartType.Line, title, xaxis, yaxis);
             Application.Run(chart);
         }
     }

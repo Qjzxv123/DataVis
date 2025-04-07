@@ -64,11 +64,13 @@ public static double CalculateYQ1(List<(double, double)>  values){
 }
 public static double CalculateXQ3(List<(double, double)>  values){
     values.Sort((x, y) => x.Item1.CompareTo(y.Item1));
-    return CalculateXMedian(values.GetRange((values.Count / 2)+1, values.Count / 2));
+    int startIndex = (values.Count % 2 == 0) ? values.Count / 2 : (values.Count / 2) + 1;
+    return CalculateXMedian(values.GetRange(startIndex, values.Count - startIndex));
 }
 public static double CalculateYQ3(List<(double, double)>  values){
     values.Sort((x, y) => x.Item2.CompareTo(y.Item2));
-    return CalculateYMedian(values.GetRange((values.Count / 2)+1, values.Count / 2));
+    int startIndex = (values.Count % 2 == 0) ? values.Count / 2 : (values.Count / 2) + 1;
+    return CalculateYMedian(values.GetRange(startIndex, values.Count - startIndex));
 }
 public static double CalculateXIQR(List<(double, double)>  values){
     return CalculateXQ3(values)-CalculateXQ1(values);

@@ -36,8 +36,9 @@ class Chart : Form
     private void InitializeChart()
     {
         this.Text = Title;
-        this.Width = 800;
-        this.Height = 600;
+        this.Width = Screen.PrimaryScreen?.Bounds.Width ?? 800; // Default to 800 if PrimaryScreen is null
+        this.Height = Screen.PrimaryScreen?.Bounds.Height ?? 600;
+        this.WindowState = FormWindowState.Maximized;
 
         // Create the chart control based on the chart type
         Control chartControl = Type switch
@@ -71,7 +72,8 @@ class Chart : Form
             YAxes = new Axis[]
             {
                 new Axis { Name = YLabel }
-            }
+            },
+            ZoomMode = ZoomAndPanMode.Both // Enable zooming and panning on both axes
         };
     }
 
@@ -93,7 +95,8 @@ class Chart : Form
             YAxes = new Axis[]
             {
                 new Axis { Name = YLabel }
-            }
+            },
+            ZoomMode = ZoomAndPanMode.Both // Enable zooming and panning on both axes
         };
     }
 
@@ -115,7 +118,8 @@ class Chart : Form
             YAxes = new Axis[]
             {
                 new Axis { Name = YLabel }
-            }
+            },
+            ZoomMode = ZoomAndPanMode.Both // Enable zooming and panning on both axes
         };
     }
 
