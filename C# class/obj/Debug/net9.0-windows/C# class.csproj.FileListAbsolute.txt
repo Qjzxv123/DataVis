@@ -13,3 +13,23 @@ C:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0-windows\refin
 C:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0-windows\C# class.pdb
 C:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0-windows\C# class.genruntimeconfig.cache
 C:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0-windows\ref\C# class.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0-windows\C# class.csproj.AssemblyReference.cache
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\HarfBuzzSharp.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\LiveChartsCore.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\LiveChartsCore.SkiaSharpView.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\LiveChartsCore.SkiaSharpView.WinForms.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\OpenTK.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\OpenTK.GLControl.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\SkiaSharp.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\SkiaSharp.HarfBuzz.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\SkiaSharp.Views.Desktop.Common.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\SkiaSharp.Views.WindowsForms.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\runtimes\osx\native\libHarfBuzzSharp.dylib
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\runtimes\win-arm64\native\libHarfBuzzSharp.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\runtimes\win-x64\native\libHarfBuzzSharp.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\runtimes\win-x86\native\libHarfBuzzSharp.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\runtimes\osx\native\libSkiaSharp.dylib
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\bin\Debug\net9.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
+c:\Users\aidan\OneDrive\Desktop\C# Final\C# class\obj\Debug\net9.0-windows\C# class.csproj.Up2Date
