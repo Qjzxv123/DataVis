@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
 using LiveChartsCore;
 using LiveChartsCore.SkiaSharpView.WinForms;
 using LiveChartsCore.SkiaSharpView;
@@ -58,21 +55,21 @@ class Chart : Form
     {
         return new CartesianChart
         {
-            Series = new ISeries[]
-            {
+            Series =
+            [
                 new ColumnSeries<double>
                 {
                     Values = GetYValues().ToList()
                 }
-            },
-            XAxes = new Axis[]
-            {
+            ],
+            XAxes =
+            [
                 new Axis { Name = XLabel }
-            },
-            YAxes = new Axis[]
-            {
+            ],
+            YAxes =
+            [
                 new Axis { Name = YLabel }
-            },
+            ],
             ZoomMode = ZoomAndPanMode.Both // Enable zooming and panning on both axes
         };
     }
@@ -81,21 +78,21 @@ class Chart : Form
     {
         return new CartesianChart
         {
-            Series = new ISeries[]
-            {
+            Series =
+            [
                 new ScatterSeries<ObservablePoint>
                 {
                     Values = GetScatterValues().ToList()
                 }
-            },
-            XAxes = new Axis[]
-            {
+            ],
+            XAxes =
+            [
                 new Axis { Name = XLabel }
-            },
-            YAxes = new Axis[]
-            {
+            ],
+            YAxes =
+            [
                 new Axis { Name = YLabel }
-            },
+            ],
             ZoomMode = ZoomAndPanMode.Both // Enable zooming and panning on both axes
         };
     }
@@ -104,21 +101,21 @@ class Chart : Form
     {
         return new CartesianChart
         {
-            Series = new ISeries[]
-            {
+            Series =
+            [
                 new LineSeries<double>
                 {
                     Values = GetYValues().ToList()
                 }
-            },
-            XAxes = new Axis[]
-            {
+            ],
+            XAxes =
+            [
                 new Axis { Name = XLabel }
-            },
-            YAxes = new Axis[]
-            {
+            ],
+            YAxes =
+            [
                 new Axis { Name = YLabel }
-            },
+            ],
             ZoomMode = ZoomAndPanMode.Both // Enable zooming and panning on both axes
         };
     }
