@@ -52,4 +52,12 @@ class ManiputlateaData{
         }
         return data;
     }
+    public static string ToString(List<(double, double)> data){
+        // Print data to console
+        string output="";
+        foreach(var item in data){
+            output+= $"({item.Item1}, {item.Item2}), ";
+        }
+        return output.TrimEnd(',', ' ');
+    }
 }

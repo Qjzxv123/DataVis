@@ -1,14 +1,16 @@
 using LiveChartsCore;
 using LiveChartsCore.SkiaSharpView.WinForms;
 using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore.SkiaSharpView.Painting;
 using LiveChartsCore.Measure;
 using LiveChartsCore.Defaults;
+using System.Security.Cryptography.X509Certificates;
 
 enum ChartType
 {
-    Bar,
     Scatter,
-    Line
+    Line,
+    BoxPlot
 }
 
 class Chart : Form
@@ -40,38 +42,15 @@ class Chart : Form
         // Create the chart control based on the chart type
         Control chartControl = Type switch
         {
-            ChartType.Bar => CreateBarChart(),
             ChartType.Scatter => CreateScatterPlot(),
             ChartType.Line => CreateLineChart(),
+            ChartType.BoxPlot => CreateBoxPlot(),
             _ => throw new ArgumentException("Invalid chart type")
         };
 
         // Add the chart control to the form
         chartControl.Dock = DockStyle.Fill;
         this.Controls.Add(chartControl);
-    }
-
-    private CartesianChart CreateBarChart()
-    {
-        return new CartesianChart
-        {
-            Series =
-            [
-                new ColumnSeries<double>
-                {
-                    Values = GetYValues().ToList()
-                }
-            ],
-            XAxes =
-            [
-                new Axis { Name = XLabel }
-            ],
-            YAxes =
-            [
-                new Axis { Name = YLabel }
-            ],
-            ZoomMode = ZoomAndPanMode.Both // Enable zooming and panning on both axes
-        };
     }
 
     private CartesianChart CreateScatterPlot()
@@ -82,7 +61,9 @@ class Chart : Form
             [
                 new ScatterSeries<ObservablePoint>
                 {
-                    Values = GetScatterValues().ToList()
+                    Values = GetScatterValues().ToList(),
+                    XToolTipLabelFormatter =(chartPoint) => $"X: {chartPoint.Coordinate.PrimaryValue}",
+                    YToolTipLabelFormatter =(chartPoint) => $"Y: {chartPoint.Coordinate.SecondaryValue}"
                 }
             ],
             XAxes =
@@ -99,15 +80,25 @@ class Chart : Form
 
     private CartesianChart CreateLineChart()
     {
+
         return new CartesianChart
         {
-            Series =
-            [
-                new LineSeries<double>
+            Series = new ISeries[]
+            {
+                new LineSeries<ObservablePoint>
                 {
-                    Values = GetYValues().ToList()
+                    Values = GetLineValues().ToList(),
+                    Stroke = new SolidColorPaint
+                    {
+                        Color = SkiaSharp.SKColors.Red,
+                        StrokeThickness = 2
+                    },
+                    Fill = null, // No fill for the line of best fit
+                    XToolTipLabelFormatter =(chartPoint) => $"X: {chartPoint.Coordinate.SecondaryValue}",
+                    YToolTipLabelFormatter =(chartPoint) => $"Y: {chartPoint.Coordinate.PrimaryValue}"
                 }
-            ],
+                
+            },
             XAxes =
             [
                 new Axis { Name = XLabel }
@@ -120,19 +111,61 @@ class Chart : Form
         };
     }
 
-    private IEnumerable<double> GetYValues()
-    {
-        foreach (var (_, y) in Data)
+    private CartesianChart CreateBoxPlot(){
+        return new CartesianChart
         {
-            yield return y;
-        }
+        Series = new List<ISeries>
+        {
+            new BoxSeries<BoxValue>
+            {
+                Name = XLabel,
+                Values = new List<BoxValue>
+                {
+                    new BoxValue(
+                        AnalyzeData.XFiveNumberSummary(Data)[0],
+                        AnalyzeData.XFiveNumberSummary(Data)[1],
+                        AnalyzeData.XFiveNumberSummary(Data)[2],
+                        AnalyzeData.XFiveNumberSummary(Data)[3],
+                        AnalyzeData.XFiveNumberSummary(Data)[4])
+                }
+            },
+            new BoxSeries<BoxValue>
+            {
+                Name = YLabel,
+                Values = new List<BoxValue>
+                {
+                    new BoxValue(
+                        AnalyzeData.YFiveNumberSummary(Data)[0],
+                        AnalyzeData.YFiveNumberSummary(Data)[1],
+                        AnalyzeData.YFiveNumberSummary(Data)[2],
+                        AnalyzeData.YFiveNumberSummary(Data)[3],
+                        AnalyzeData.YFiveNumberSummary(Data)[4])
+                }
+            }
+        },
+            XAxes =
+            [
+                new Axis { Name = XLabel }
+            ],
+            YAxes =
+            [
+                new Axis { Name = YLabel }
+            ],
+            ZoomMode = ZoomAndPanMode.Both // Enable zooming and panning on both axes
+        };
     }
-
     private IEnumerable<ObservablePoint> GetScatterValues()
     {
         foreach (var (x, y) in Data)
         {
             yield return new ObservablePoint(x, y);
         }
+    }
+    private IEnumerable<ObservablePoint> GetLineValues()
+    {
+        (double Slope, double Intercept) bestFitLine = AnalyzeData.GenerateLineOfBestFit(Data);
+        for(int i=-100; i<=100; i++){
+        yield return new ObservablePoint(i, bestFitLine.Slope * i + bestFitLine.Intercept);
+    }
     }
 }

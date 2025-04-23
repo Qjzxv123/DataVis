@@ -78,11 +78,23 @@ public static double CalculateXIQR(List<(double, double)>  values){
 public static double CalculateYIQR(List<(double, double)>  values){
     return CalculateYQ3(values)-CalculateYQ1(values);
 }
-public static String XFiveNumberSummary(List<(double, double)>  values){
-    return "Min: " + values.Min(x => x.Item1) + ", Q1: " + CalculateXQ1(values) + ", Median: " + CalculateXMedian(values) + ", Q3: " + CalculateXQ3(values) + ", Max: " + values.Max(x => x.Item1);
+public static double[] XFiveNumberSummary(List<(double, double)> values){
+    return new double[] {
+        values.Max(x => x.Item1),
+        CalculateXQ3(values),
+        CalculateXMedian(values),
+        CalculateXQ1(values),
+        values.Min(x => x.Item1)
+    };
 }
-public static String YFiveNumberSummary(List<(double, double)>  values){
-    return "Min: " + values.Min(x => x.Item2) + ", Q1: " + CalculateYQ1(values) + ", Median: " + CalculateYMedian(values) + ", Q3: " + CalculateYQ3(values) + ", Max: " + values.Max(x => x.Item2);
+public static double[] YFiveNumberSummary(List<(double, double)> values){
+    return new double[] {
+        values.Max(x => x.Item2),
+        CalculateYQ3(values),
+        CalculateYMedian(values),
+        CalculateYQ1(values),
+        values.Min(x => x.Item2)
+    };
 }
 public static List<double> DetectXOutliers(List<(double, double)> values){
     List<double> outliers=[];
@@ -102,7 +114,7 @@ public static List<double> DetectYOutliers(List<(double, double)> values){
     }
     return outliers;
 }
-public static string GenerateLineOfBestFit(List<(double, double)> values)
+public static (double,double) GenerateLineOfBestFit(List<(double, double)> values)
 {
     double xMean = CalculateXMean(values);
     double yMean = CalculateYMean(values);
@@ -111,6 +123,6 @@ public static string GenerateLineOfBestFit(List<(double, double)> values)
     double correlation = CalculateCorrelation(values);
     double slope = correlation * yStandardDeviation / xStandardDeviation;
     double yIntercept = yMean - slope * xMean;
-    return "y = " + slope + "x + " + yIntercept;
+    return (slope, yIntercept);
 }
 }
